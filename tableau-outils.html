@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tableau comparatif – Outils numériques en formation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Import Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f7fa;
+      --fg: #222;
+      --accent: #2f5597;
+      --header-bg: #e4e7f2;
+      --row-alt: #ffffff;
+      --row-alt2: #f1f3f8;
+      --border: #d0d4e0;
+      --font: 'Montserrat', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: var(--font);
+    }
+
+    body {
+      margin: 0;
+      padding: 1.5rem;
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      margin: 0 0 0.5rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin: 0 0 1.5rem;
+      font-size: 1rem;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .table-container {
+      background: #fff;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 900px; 
+      font-size: 0.88rem;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: var(--header-bg);
+      text-align: center;
+      padding: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    thead th:first-child {
+      text-align: left;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: var(--row-alt);
+    }
+
+    tbody tr:nth-child(even) {
+      background: var(--row-alt2);
+    }
+
+    td {
+      padding: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      vertical-align: top;
+      font-weight: 400;
+    }
+
+    td:first-child,
+    th:first-child {
+      text-align: left;
+      font-weight: 600;
+      min-width: 180px;
+      position: sticky;
+      left: 0;
+      z-index: 3;
+      background: inherit;
+    }
+
+    td:last-child,
+    th:last-child {
+      border-right: none;
+    }
+
+    .note {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #555;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0.5rem;
+      }
+      .wrapper {
+        max-width: none;
+        margin: 0;
+      }
+      .table-container {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+      }
+      table {
+        min-width: 0;
+        font-size: 0.75rem;
+      }
+      thead th {
+        position: static;
+      }
+      td:first-child,
+      th:first-child {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Tableau comparatif – Outils numériques en formation</h1>
+    <p class="subtitle">
+      Comparaison de plusieurs outils (Whiteboard, Miro, Mentimeter, AhaSlides, Wooclap, Mindomo)
+      selon différents critères pédagogiques, techniques et pratiques.
+    </p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Critère</th>
+            <th>Whiteboard</th>
+            <th>Miro</th>
+            <th>Mentimeter</th>
+            <th>AhaSlides</th>
+            <th>Wooclap</th>
+            <th>Mindomo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Type d’interaction</td><td>Visuelle simple</td><td>Visuelle avancée</td><td>Sondage/Quiz</td><td>Quiz dynamique</td><td>Exercices cognitifs</td><td>Carte mentale</td></tr>
+
+          <tr><td>Intégration GoToWebinar</td><td>❌ Non</td><td>✅ Native</td><td>❌ Non</td><td>❌ Non</td><td>❌ Non</td><td>❌ Non</td></tr>
+
+          <tr><td>Compte stagiaire</td><td>❌ Non</td><td>❌ Non (invité)</td><td>❌ Non</td><td>❌ Non</td><td>❌ Non</td><td>⚠️ Si collaboration</td></tr>
+
+          <tr><td>Installation</td><td>❌ Non</td><td>❌ Non</td><td>❌ Non</td><td>❌ Non</td><td>❌ Non</td><td>❌ Non</td></tr>
+
+          <tr><td>Lisibilité en webinaire</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+
+          <tr><td>Fluidité technique</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+
+          <tr><td>Niveau de complexité</td><td>Très simple</td><td>Avancé</td><td>Simple</td><td>Simple</td><td>Moyen</td><td>Moyen</td></tr>
+
+          <tr><td>Niveau d’engagement</td><td>Moyen</td><td>Très élevé</td><td>Élevé</td><td>Très élevé</td><td>Élevé</td><td>Moyen</td></tr>
+
+          <tr><td>Profondeur pédagogique</td><td>Faible</td><td>Élevée</td><td>Moyenne</td><td>Faible</td><td>Très élevée</td><td>Moyenne</td></tr>
+
+          <tr><td>Temps de préparation</td><td>Court (5 min)</td><td>Long (30 min)</td><td>Moyen (15 min)</td><td>Moyen (20 min)</td><td>Long (30 min)</td><td>Moyen (15 min)</td></tr>
+
+          <tr><td>Durée d’activité conseillée</td><td>5–10 min</td><td>20–60 min</td><td>3–7 min</td><td>3–5 min</td><td>10–15 min</td><td>10–20 min</td></tr>
+
+          <tr><td>Moment idéal</td><td>Début / Ice-breaker</td><td>Ateliers longs</td><td>Tout moment</td><td>Transitions</td><td>Après apprentissage</td><td>Synthèse finale</td></tr>
+
+          <tr><td>Public cible</td><td>Tout public</td><td>Public avancé</td><td>Tout public</td><td>Tout public</td><td>Tout public</td><td>Tout public</td></tr>
+
+          <tr><td>Collaboration simultanée</td><td>✅ Oui (limitée)</td><td>✅ Oui</td><td>❌ Non</td><td>❌ Non</td><td>❌ Non</td><td>✅ Oui (avec compte)</td></tr>
+
+          <tr><td>Export de résultats</td><td>✅ PNG</td><td>✅ PNG / PDF / CSV</td><td>✅ PDF / Excel</td><td>✅ PDF</td><td>✅ PDF / Excel</td><td>✅ PDF / PNG / PPT</td></tr>
+
+          <tr><td>Coût</td><td>Gratuit</td><td>Freemium*</td><td>Freemium*</td><td>Freemium*</td><td>Freemium*</td><td>Freemium*</td></tr>
+        </tbody>
+      </table>
+
+      <p class="note">
+        *Freemium : version gratuite suffisante pour un usage formation standard. Fonctionnalités avancées payantes.
+      </p>
+
+    </div>
+  </div>
+</body>
+</html>
